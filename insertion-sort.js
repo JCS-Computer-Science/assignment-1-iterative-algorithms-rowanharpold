@@ -4,6 +4,7 @@ function insertionSort(array) {
 	 ** before it over and over as long as the element before it
 	 ** is bigger
 	 */
+	
 
 	return array;
 }
