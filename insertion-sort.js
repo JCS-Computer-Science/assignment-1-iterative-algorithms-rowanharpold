@@ -4,6 +4,9 @@ function insertionSort(array) {
 	 ** before it over and over as long as the element before it
 	 ** is bigger
 	 */
+	if(array.length == 0){
+		return array
+	}
 	let inOrder = false
 	while(!inOrder){
 		for (let i = 0; i < array.length - 1; i++) {
