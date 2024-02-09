@@ -3,27 +3,22 @@ function insertionSort(array) {
 		return array;
 		
 	}
-	let newArr = [array[0]];
-	array.splice(0, 1);	
-	let inOrder = false
-	let length = array.length
-	while(!inOrder){
-		newArr.unshift(array[0])
-		array.splice(0, 1);
-		bubbleSort(newArr)
-		if(newArr.length == length){
-			inOrder = true;
-			break;
+	for (let i = 1; i < array.length; i++) {
+		let arrayValue = array[i]
+		for (j = i - 1; j >= 0 && array[j] > arrayValue; j--) {
+			array[j + 1] = array[j]
 		}
+		array[j + 1] = arrayValue
 	}
-	return newArr;
+	return array
+}
 
 	/*
 	 ** For each element in the array, swap it with the element
 	 ** before it over and over as long as the element before it
 	 ** is bigger
 	 */
-}
+
 
 
 
